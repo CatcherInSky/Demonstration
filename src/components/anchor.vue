@@ -9,24 +9,14 @@
   </a-anchor>
 </template>
 <script setup>
+import { computed } from "@vue/runtime-core";
+import store from '../store';
+
 const handleClick = (e) => {
   e.preventDefault();
 }
-// 通过遍历页面元素自动获取
-const list = [
-  {
-    label: 'a',
-    value: 'a',
-  },
-  {
-    label: 'b',
-    value: 'b',
-  },
-  {
-    label: 'c',
-    value: 'c',
-  },
-];
+
+const list = computed(() => store.state.anchor_list)
 </script>
 <style scoped>
 .anchor {

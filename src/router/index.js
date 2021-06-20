@@ -1,3 +1,4 @@
+import { getAnchorList } from '../utils/anchor';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 const router = createRouter({
@@ -21,11 +22,13 @@ const router = createRouter({
   ]
 });
 router.beforeEach((to, from, next) => {
-  console.log(to.name)
   if(to.name === undefined) {
     next({name: 'home'});
   } else {
     next();
   }
+})
+router.afterEach(() => {
+  getAnchorList();
 })
 export default router

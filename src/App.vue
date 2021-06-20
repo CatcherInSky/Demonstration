@@ -25,6 +25,7 @@
       </a-layout>
     </a-layout>
   </a-layout>
+  <a-back-top />
 </template>
 <script setup>
   import Header from './components/header.vue';

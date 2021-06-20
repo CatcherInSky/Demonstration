@@ -2,6 +2,11 @@ import {createStore} from 'vuex';
 
 export default createStore({
   state: {
-    couter: 0
+    anchor_list: [],
+  },
+  mutations: {
+    update_anchor_list(state, list) {
+      state.anchor_list = list;
+    }
   }
 });
