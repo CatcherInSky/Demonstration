@@ -3,7 +3,7 @@
     mode="inline"
     theme="dark"
   >
-    <a-menu-item v-for="item in list"
+    <a-menu-item v-for="item in menu_list"
       :key="item.value"
       @click="router.push({name: item.value})"
     > {{item.label}} </a-menu-item>
@@ -11,20 +11,6 @@
 </template>
 <script setup>
 import router from '@/router/index.js';
-// 根据模块自动生成？？？
-const list = [
-  {
-    label: '首页',
-    value: 'home',
-  },
-  {
-    label: 'CSS',
-    value: 'css',
-  },
-  {
-    label: 'canvas',
-    value: 'canvas',
-  },
-]
+import { menu_list } from '@/utils/category.js'
 
 </script>

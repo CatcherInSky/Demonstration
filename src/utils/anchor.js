@@ -7,10 +7,10 @@ const prefix = `anchor_`;
 export const getAnchorList = () => {
     nextTick(() => {
         store.commit('update_anchor_list', Array.prototype.map.call(window.document.all, dom => ({
-          label: dom.getAttribute('title'),
+          label: dom.getAttribute('data-title'),
           value: dom.getAttribute('id'),
         })).filter(it => Boolean(it.value) && new RegExp(`^${prefix}`).test(it.value)))
     })
 };
 
-export const setAnchor = (title) => ({id: `${prefix + title}`, title})
+export const setAnchor = (title) => ({id: `${prefix + title}`, 'data-title': title})

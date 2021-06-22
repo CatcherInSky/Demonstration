@@ -1,10 +1,11 @@
 <template>
-  <div>
-    canvas
-      <div id="anchor_cv1" />
-      <div id="anchor_cv2" />
-      <div id="anchor_cv3" />
-  </div>
+  <Page 
+    title="Canvas"
+  >
+  </Page>
 </template>
-<script>
+<script setup>
+  import Page from '../../components/page.vue';
+  import Card from '../../components/card.vue';
+  import { setAnchor } from '../../utils/anchor.js';
 </script>

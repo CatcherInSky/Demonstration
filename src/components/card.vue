@@ -5,7 +5,7 @@
     </a-card>
 </template>
 <script setup>
-import { defineProps } from "@vue/runtime-core";
+import { defineProps, toRefs } from "@vue/runtime-core";
 
 const { title, description } = toRefs(defineProps({
     'title': String, 
