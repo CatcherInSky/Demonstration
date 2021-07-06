@@ -16,6 +16,10 @@ export const list = [
         label: '皮卡丘',
         value: 'pikaqiu',
     },
+    {
+        label: '鸿蒙',
+        value: 'harmony',
+    },
 ]
 
 export const routes = list.map(it => {

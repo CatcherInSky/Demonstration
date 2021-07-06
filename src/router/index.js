@@ -24,6 +24,11 @@ const router = createRouter({
       path: '/pikaqiu', 
       component: () => import('views/pikaqiu/index.vue'),
     },
+    { 
+      name: 'harmony',
+      path: '/harmony', 
+      component: () => import('views/harmony/index.vue'),
+    },
   ]
 });
 router.beforeEach((to, from, next) => {

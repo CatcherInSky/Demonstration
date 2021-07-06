@@ -12,7 +12,7 @@
 <script>
 // 样式小技巧
 // border
-// border-radius
+// border-radius 100% 圆
 // box-shadow
 // transform
 
