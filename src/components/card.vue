@@ -1,5 +1,5 @@
 <template>
-    <a-card>
+    <a-card style="margin-bottom: 10px">
         <slot />
         <a-card-meta :title="title" :description="description" />
     </a-card>

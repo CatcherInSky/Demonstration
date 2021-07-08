@@ -1,12 +1,8 @@
 <template>
   <Page 
-    title="Canvas"
+    title="3D"
   >
-    <Card v-bind="setAnchor('时钟')" title="时钟">
-      <Clock />
-    </Card>
-    <Card v-bind="setAnchor('七巧板')" title="七巧板">
-      <Tangram />
+    <Card v-bind="setAnchor('看房')" title="看房">
     </Card>
     <!-- <Card v-bind="setAnchor()" title=""></Card>
     <Card v-bind="setAnchor()" title=""></Card> -->
@@ -17,6 +13,4 @@
   import Card from '../../components/card.vue';
   import { setAnchor } from '../../utils/anchor.js';
 
-  import Tangram from './components/tangram.vue';
-  import Clock from './components/clock.vue';
 </script>

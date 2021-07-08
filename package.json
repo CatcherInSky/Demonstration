@@ -10,6 +10,7 @@
     "ant-design-vue": "^2.1.6",
     "element-plus": "^1.0.2-beta.44",
     "element3": "0.0.40",
+    "three.js": "^0.77.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.8",
     "vuex": "^4.0.0"

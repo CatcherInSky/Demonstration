@@ -1,5 +1,5 @@
 <template>
-  <canvas id="canvas" ref="canvas" width="1024" height="768">
+  <canvas id="canvas" ref="canvas" width="1024" height="800">
     <!--兼容降错-->
 		当前浏览器不支持 Canvas，请更换浏览器后再试
   </canvas>
@@ -21,15 +21,15 @@ onMounted(() => {
   draw(canvas.value.getContext('2d'), tanGram);
 });
 
-const draw = (context, data) => {
+const draw = (ctx, data) => {
   data.map(({p, color}) => {
-    context.beginPath();
+    ctx.beginPath();
     p.forEach((item, i) => {
-      i === 0 ? context.moveTo(item.x, item.y) : context.lineTo(item.x, item.y);
+      i === 0 ? ctx.moveTo(item.x, item.y) : ctx.lineTo(item.x, item.y);
     });
-    context.closePath();
-    context.fillStyle = color;
-    context.fill();
+    ctx.closePath();
+    ctx.fillStyle = color;
+    ctx.fill();
   })
 } 
 
