@@ -17,12 +17,14 @@ const RADIUS = 8;
 const MARGIN_TOP = 60;
 const MARGIN_LEFT = 10;
 
+const fixTime = (number = 0, arr = number.toString().split('')) =>  arr.length === 1 ? [0, ...arr] : arr;
+
 const getTime = (time = new Date()) => [
-  ...time.getHours().toString().split(''),
+  ...fixTime(time.getHours()),
   10,
-  ...time.getMinutes().toString().split(''),
+  ...fixTime(time.getMinutes()),
   10,
-  ...time.getSeconds().toString().split(''),
+  ...fixTime(time.getSeconds()),
 ].map(Number)
 const getTemplate = (template = getTime()) => template.reduce(
   (acc, cur) => acc.map((list, index) =>  list.concat(digit[cur][index])), 

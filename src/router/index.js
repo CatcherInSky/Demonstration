@@ -8,7 +8,7 @@ const router = createRouter({
   routes: routes.map(({name, path, url}) => ({
     name,
     path,
-    component: () => import(`${url}`),
+    component: () => import(`${url}`)
   }))
 });
 router.beforeEach((to, from, next) => {
