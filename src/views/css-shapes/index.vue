@@ -2,7 +2,7 @@
   <Page 
     title="CSS形状"
   >
-    <Card v-bind="setAnchor('几何形状')">
+    <Card v-bind="setAnchor(TITLE_GEOMETRY)" :title="TITLE_GEOMETRY">
       <Geometry />
     </Card>
   </Page>
@@ -14,5 +14,5 @@
   import { setAnchor } from '../../utils/anchor.js';
 
   import Geometry from './components/geometry.vue';
-
+  const TITLE_GEOMETRY = '几何形状'
 </script>

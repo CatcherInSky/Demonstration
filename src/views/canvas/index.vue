@@ -2,10 +2,10 @@
   <Page 
     title="Canvas"
   >
-    <Card v-bind="setAnchor('时钟')" title="时钟">
+    <Card v-bind="setAnchor(TITLE_CLOCK)" :title="TITLE_CLOCK">
       <Clock />
     </Card>
-    <Card v-bind="setAnchor('七巧板')" title="七巧板">
+    <Card v-bind="setAnchor(TITLE_TANGRAM)" :title="TITLE_TANGRAM">
       <Tangram />
     </Card>
     <!-- <Card v-bind="setAnchor()" title=""></Card>
@@ -18,5 +18,8 @@
   import { setAnchor } from '../../utils/anchor.js';
 
   import Tangram from './components/tangram.vue';
+  const TITLE_TANGRAM = '七巧板';
+
   import Clock from './components/clock.vue';
+  const TITLE_CLOCK = '时钟'
 </script>

@@ -1,8 +1,8 @@
 <template>
   <Page 
-    title="鸿蒙"
+    title="鸿蒙开屏"
   >
-    <Card v-bind="setAnchor('鸿蒙')" title="动画" description="动画">
+    <Card v-bind="setAnchor(TITLE_HARMONY)" :title="TITLE_HARMONY">
       <Harmony />
     </Card>
   </Page>
@@ -13,4 +13,6 @@
   import Card from '../../components/card.vue';
   import Harmony from './components/harmony.vue';
   import { setAnchor } from '../../utils/anchor.js';
+
+  const TITLE_HARMONY = '鸿蒙';
 </script>

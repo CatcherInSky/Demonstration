@@ -1,6 +1,6 @@
 <template>
 
-  <canvas id="canvas" ref="canvas" width="1024" height="768">
+  <canvas id="canvas" ref="canvas" :width="WIDTH" :height="HEIGHT">
     <!--兼容降错-->
 		当前浏览器不支持 Canvas，请更换浏览器后再试
     <!-- https://juejin.cn/post/6948262151215644680?utm_source=gold_browser_extension -->
@@ -11,8 +11,8 @@ import { ref } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 import { digit } from './digit.js';
 const canvas = ref(null);
-const WINDOW_WIDTH = 1024;
-const WINDOW_HEIGHT = 768;
+const WIDTH = 1024;
+const HEIGHT = 368;
 const RADIUS = 8;
 const MARGIN_TOP = 60;
 const MARGIN_LEFT = 10;
@@ -32,7 +32,7 @@ const getTemplate = (template = getTime()) => template.reduce(
 )
 // 绘制圆点
 const renderDigit = ( x , y , template , ctx ) => {
-    ctx.clearRect(0, 0, 1024, 768)
+    ctx.clearRect(0, 0, WIDTH, HEIGHT)
     ctx.fillStyle = "rgb(0,102,153)";
     template.forEach((number, i) => {
       number.forEach((point, j) => {
@@ -48,19 +48,17 @@ const renderDigit = ( x , y , template , ctx ) => {
         }
       })
     })
-
 }
 
 const render = (ctx) => {
   console.log(ctx)
   setInterval(() => renderDigit( MARGIN_LEFT , MARGIN_TOP , getTemplate(), ctx ), 1000)
-
-  
 };
 
 onMounted(() => {
   render(canvas.value.getContext('2d'))
 })
+
 </script>
 <style scoped>
 #canvas {

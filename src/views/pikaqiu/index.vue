@@ -2,7 +2,7 @@
   <Page 
     title="皮卡丘"
   >
-    <Card v-bind="setAnchor('CSS绘制')" title="CSS" description="CSS绘制">
+    <Card v-bind="setAnchor(TITLE_CSS)" :title="TITLE_CSS">
       <Css />
     </Card>
   </Page>
@@ -13,4 +13,5 @@
   import Card from '../../components/card.vue';
   import Css from './components/css.vue';
   import { setAnchor } from '../../utils/anchor.js';
+  const TITLE_CSS = 'CSS绘制'
 </script>
