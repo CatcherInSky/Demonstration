@@ -9,6 +9,9 @@
 <script setup>
 import { ref } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
+// todo 随机抽奖 
+
+// todo 超出范围
 
 const canvas = ref(null);
 const init = (ctx) => {
