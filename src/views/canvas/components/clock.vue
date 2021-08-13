@@ -3,10 +3,10 @@
   <canvas id="canvas" ref="canvas" :width="WIDTH" :height="HEIGHT">
     <!--兼容降错-->
 		当前浏览器不支持 Canvas，请更换浏览器后再试
-    <!-- https://juejin.cn/post/6948262151215644680?utm_source=gold_browser_extension -->
   </canvas>
 </template>
 <script setup>
+// https://juejin.cn/post/6948262151215644680
 import { ref } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 import { digit } from './digit.js';

@@ -5,6 +5,7 @@
   </canvas>
 </template>
 <script setup>
+// https://juejin.cn/post/6948262151215644680
 import { ref } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 const canvas = ref(null);

@@ -4,6 +4,7 @@
   </div>
 </template>
 <script setup>
+// https://juejin.cn/post/6973865268426571784
 import { ref, toRefs } from '@vue/reactivity';
 import { defineProps, onMounted, watch } from '@vue/runtime-core';
 import * as THREE from 'three';
