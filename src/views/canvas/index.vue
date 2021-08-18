@@ -14,6 +14,9 @@
     <Card v-bind="setAnchor(TTILE_Snake)" :title="TTILE_Snake">
       <Snake />
     </Card>
+    <Card v-bind="setAnchor(TTILE_Gobang)" :title="TTILE_Gobang">
+      <Gobang />
+    </Card>
     <!-- <Card v-bind="setAnchor()" title=""></Card>
     <Card v-bind="setAnchor()" title=""></Card> -->
   </Page>
@@ -34,4 +37,8 @@
 
   import Snake from './components/greedy_snake.vue';
   const TTILE_Snake = '贪吃蛇';
+
+  
+  import Gobang from './components/gobang.vue';
+  const TTILE_Gobang = '五子棋';
 </script>

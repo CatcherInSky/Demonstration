@@ -135,6 +135,7 @@ class Snake {
       switch (e.keyCode) {
         case 37:
           // 三元表达式，防止右移动时按左，下面同理(贪吃蛇可不能直接掉头)
+          // todo 转向比刷新频率快会有问题，最好一次刷新只执行一次转向
           this.direction = this.direction === 'right' ? 'right' : 'left'
           break
         case 38:
